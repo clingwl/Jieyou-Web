@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "99cea670022eb720",
+    "type": "split",
+    "children": [
+      {
+        "id": "04e261c9a4e24914",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "baf4371f0b6606e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/blog/o-my-prose.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e65deac479deffac",
+    "type": "split",
+    "children": [
+      {
+        "id": "51a7eff42fceb2b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "982c78a4511d77e1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e29dc3dba8dacfd7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "12557c3bf881a87e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "11e367d8d1ea03d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "bafa71f48dc75644",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "01660824b0ccaf50",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/blog/o-my-prose.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "65e817d9aef1016e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/blog/o-my-prose.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "53423c3eb3728feb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f4cdfb10e76a9f00",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/blog/o-my-prose.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "edit-mdx:New .mdx file": false
+    }
+  },
+  "active": "baf4371f0b6606e0",
+  "lastOpenFiles": [
+    "pages/wordCount.astro",
+    "content/blog/o-my-prose.md",
+    "components/template/md.md",
+    "content/blog/__int128.md",
+    "content/blog/__int128 1.md",
+    "content/blog/conic-section-1.md",
+    "content/blog/Splay树（伸展树）.md",
+    "a1eaee3ef14c74ce29374790cda3359a.jpeg",
+    "content/blog/the-world.md",
+    "content/blog/sperner.mdx",
+    "content/blog/diary.md",
+    "content/blog/frosti-mdx.mdx",
+    "content/blog/gcd、exgcd、质数筛法、逆元与同余方程组复习笔记（已废弃）.md",
+    "content/blog/强连通分量.md",
+    "content/blog/用 Astro 搭建一个高性能博客.mdx",
+    "content/blog/inner.md",
+    "content/blog/the-world-past.md",
+    "content/blog/原罪.md",
+    "content/blog/outsider.md",
+    "content/blog/Brønsted–Lowry.md",
+    "content/blog/weights.md",
+    "content/blog/cauchy.mdx",
+    "content/blog/out.md",
+    "content/blog/the-wrold.md",
+    "content/blog/2024-1-2.md",
+    "content/blog/frosti-mdx copy.mdx",
+    "pages/hi.mdx",
+    "pages/sorry.mdx",
+    "pages/frosti copy.mdx",
+    "content/blog/最短路.md",
+    "content/blog/frosti-mdx.md",
+    "content/blog/新的起点.md",
+    "components/template/mdx.mdx",
+    "components/blog/warning copy.astro",
+    "content/blog/生成函数在非常系数与非齐次的线性递推关系的应用.md",
+    "content/blog/邻接表与链式前向星.md",
+    "content/blog/优先队列BFS.md"
+  ]
+}

@@ -1,0 +1,72 @@
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseCard from "../components/BaseCard.astro";
+import Collapse from "../components/blog/collapse.astro";
+import Diff from "../components/blog/diff.astro";
+import Error from "../components/blog/error.astro";
+import Info from "../components/blog/info.astro";
+import Kbd from "../components/blog/kbd.astro";
+import Success from "../components/blog/success.astro";
+import Warning from "../components/blog/warning.astro";
+import TimeLine from "../components/page/TimeLine.astro";
+import LinkCard from "../components/page/LinkCard.astro";
+
+<BaseLayout title="Home">
+  <BaseCard title="Home">
+# Hi there! 👋
+
+我是 `子川`
+
+一位喜欢折腾的小菜鸟
+
+---
+
+> 这里是我的落脚点
+
+  </BaseCard>
+  <BaseCard title="home">
+# Home
+
+只是一位普通的大专生
+
+以前想给一位朋友送些有意义的礼物。什么是有意义的礼物？想来想去，最后，我送了他一本空白的本子。我说：**那些有意义的正等着被你所书写。**
+
+现在我给自己送了一本“本子”，就在这里 `>`
+
+## Content
+
+    <div class="grid grid-cols-2 gap-4">
+      <LinkCard
+        title="博客"
+        desc="想到的与看到的"
+        url="/blog"
+        target = "_self"
+      />
+      <LinkCard
+        title="项目"
+        desc="想法的实现"
+        url="/project"
+        target = "_self"
+      />
+      <LinkCard
+        title="关于"
+        desc="“我”与博客"
+        url="/about"
+        target = "_self"
+      />
+      <LinkCard
+        title="友链"
+        desc="有趣的灵魂"
+        url="/friend"
+        target = "_self"
+      />
+    </div>
+
+## ~  临时记录一些灵感，怕过去了自己就忘记了
+
+
+<Collapse title="[2024/9/22] -终于快要上线了，激动！">
+首先感谢模板提供者EveSunMaple，让我重拾网络的乐趣，现在只是高中生就蕴藏如此大的能量，未来前途不可限量！
+
+</Collapse>
+  </BaseCard>
+</BaseLayout>
