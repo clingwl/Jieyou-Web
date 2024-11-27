@@ -9,12 +9,15 @@ export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
 export const USER_NAME = "子川";
+<<<<<<< HEAD
 export const USER_SITE = "https://www.jieyou.ltd/"
+=======
+export const USER_SITE = "https://www.jieyou.ltd"
+>>>>>>> 26acf11f72e502baf0412a8dc93650c917a2d598
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
 export const SERVER_URL = "https://waline.jieyou.ltd/";
-export const TRANSITION_API = true;
 
 // Theme settings
 export const DAISYUI_THEME = {
@@ -25,6 +28,7 @@ export const CODE_THEME = {
   light: "github-light",
   dark: "github-dark",
 }
+<<<<<<< HEAD
 
 // Some informative text on the site
 export const infoTest = {
@@ -39,10 +43,12 @@ export const infoTest = {
   prevPage: "上一页",
   nextPage: "下一页",
 };
+=======
+>>>>>>> 26acf11f72e502baf0412a8dc93650c917a2d598
 
 // Menu items for navigation
 export const menuItems = [
-  { id: "home", text: "首页", href: "/", svg: "home", target: "_self" }, // Home page
+  { id: "home", text: "主页", href: "/", svg: "home", target: "_self" }, // Home page
   { id: "about", text: "关于", href: "/about", svg: "about", target: "_self" }, // About page
   {
     id: "blog",
