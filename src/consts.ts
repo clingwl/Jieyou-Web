@@ -9,17 +9,22 @@ export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
 export const USER_NAME = "子川";
+export const USER_SITE = "https://www.jieyou.ltd/"
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
 export const SERVER_URL = "https://waline.jieyou.ltd/";
 export const TRANSITION_API = true;
 
-// Site theme
-export const siteTheme = {
+// Theme settings
+export const DAISYUI_THEME = {
   light: "winter",
   dark: "dracula",
-};
+}
+export const CODE_THEME = {
+  light: "github-light",
+  dark: "github-dark",
+}
 
 // Some informative text on the site
 export const infoTest = {
@@ -56,14 +61,14 @@ export const menuItems = [
       {
         id: "tech",
         text: "技术博客",
-        href: "/blog/categories/tech",
+        href: "/blog/categories/技术",
         svg: "cube",
         target: "_self",
       }, // Technology category
       {
         id: "life",
         text: "生活博客",
-        href: "/blog/categories/life",
+        href: "/blog/categories/生活",
         svg: "heart",
         target: "_self",
       }, // Life category
@@ -86,7 +91,7 @@ export const menuItems = [
   {
     id: "contact",
     text: "联系",
-    href: "mailto:contact.evesunmaple@outlook.com", // Contact email
+    href: "admin@jieyou.ltd", // Contact email
     target: "_blank", // Open in a new tab
     svg: "contact",
   },
@@ -119,3 +124,4 @@ export const socialIcons = [
     svg: "rss",
   },
 ];
+// Category Information
