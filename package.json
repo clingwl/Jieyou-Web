@@ -1,7 +1,11 @@
 {
   "name": "frosti",
   "type": "module",
+<<<<<<< HEAD
   "version": "2.7.0",
+=======
+  "version": "2.8.0",
+>>>>>>> 0aa0e5b3b27d4883db0dbb74e48eba9a2bafa870
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -26,8 +30,13 @@
     "@swup/scroll-plugin": "^3.3.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+<<<<<<< HEAD
     "@vercel/analytics": "^1.4.0",
     "astro": "^4.16.13",
+=======
+    "@vercel/analytics": "^1.3.2",
+    "astro": "^4.16.10",
+>>>>>>> 0aa0e5b3b27d4883db0dbb74e48eba9a2bafa870
     "astro-i18next": "1.0.0-beta.21",
     "astro-icon": "^1.1.2",
     "astro-pagefind": "^1.6.0",
@@ -50,8 +59,13 @@
     "rehype-katex": "^7.0.1",
     "remark-directive": "^3.0.0",
     "remark-math": "^6.0.0",
+<<<<<<< HEAD
     "sass": "^1.81.0",
     "shiki": "^1.23.0",
+=======
+    "sass": "^1.80.6",
+    "shiki": "^1.22.2",
+>>>>>>> 0aa0e5b3b27d4883db0dbb74e48eba9a2bafa870
     "swup": "^4.8.1",
     "typescript": "^5.6.3",
     "unist-util-visit": "^5.0.0"
@@ -62,7 +76,11 @@
     "daisyui": "^4.12.14",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
+<<<<<<< HEAD
     "tailwindcss": "^3.4.15"
+=======
+    "tailwindcss": "^3.4.14"
+>>>>>>> 0aa0e5b3b27d4883db0dbb74e48eba9a2bafa870
   },
   "pnpm": {
     "overrides": {

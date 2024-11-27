@@ -1,16 +1,20 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BaseCard from "../components/BaseCard.astro";
-import error from "../components/blog/error.astro";
-import info from "../components/blog/info.astro";
-import success from "../components/blog/success.astro";
-import warn from "../components/blog/warning.astro";
+import Collapse from "../components/blog/collapse.astro";
+import Diff from "../components/blog/diff.astro";
+import Error from "../components/blog/error.astro";
+import Info from "../components/blog/info.astro";
+import Kbd from "../components/blog/kbd.astro";
+import Success from "../components/blog/success.astro";
+import Warning from "../components/blog/warning.astro";
 import TimeLine from "../components/page/TimeLine.astro";
 import LinkCard from "../components/page/LinkCard.astro";
 
 <BaseLayout title="Friend">
   <BaseCard title="Friend">
-    # Friend
+# Friend
 
+<<<<<<< HEAD
     ---
 
     ## 我的信息
@@ -68,20 +72,33 @@ import LinkCard from "../components/page/LinkCard.astro";
         img="https://q1.qlogo.cn/g?b=qq&nk=3188468169&s=640"
         desc="做一条，逆流的鱼。"
         url="https://note.moxiify.cn"
+=======
+---
+
+    <div class="grid grid-cols-2 gap-4">
+      <LinkCard
+<<<<<<< HEAD
+        title="EveSunMaple"
+        desc="一位普通的高中学生"
+        url="https://www.saroprock.com"
+        img="https://www.saroprock.com/profile.webp"
+>>>>>>> 0aa0e5b3b27d4883db0dbb74e48eba9a2bafa870
       />
       <LinkCard
-        title="NaN"
-        img="https://saroprock.oss-cn-hangzhou.aliyuncs.com/img/b6b843d84b84a3ba5526b09ebf538cd4b4c8c3f3.jpg"
-        desc="Waiting for you"
-        url="/"
+        title="EveSunMaple"
+        desc="Author of Frosti Theme Template"
+        url="https://www.saroprock.com"
+        img="https://www.saroprock.com/profile.webp"
       />
+=======
+        title="子川"
+        desc="一位普通的大学生"
+        url="https://www.jieyou.ltd/"
+        img="https://www.jieyou.ltd/profile.webp"
+      />
+
+>>>>>>> 26acf11f72e502baf0412a8dc93650c917a2d598
     </div>
-  
-  ## 关于友链申请
 
-  我更希望友链不仅仅是一个引流工具，而是彼此建立联系、交流和分享的桥梁。因此，如果你有兴趣添加友链，不妨先与我互动、沟通，让我们彼此有一些了解之后再做决定。这样，友链才能承载更多的意义，而不仅是一个简单的链接。
-
-  感谢理解与支持！❤️
-  
   </BaseCard>
 </BaseLayout>

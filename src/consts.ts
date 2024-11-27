@@ -9,6 +9,7 @@ export const SITE_DESCRIPTION = "一本本子";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
+<<<<<<< HEAD
 export const USER_NAME = "EveSunMaple";
 export const USER_SITE = "https://frosti.saroprock.com"
 export const USER_AVATAR = "/profile.webp";
@@ -16,6 +17,18 @@ export const USER_AVATAR = "/profile.webp";
 // Server and transition settings
 export const SERVER_URL = "https://waline.saroprock.com";
 export const TRANSITION_API = true;
+=======
+export const USER_NAME = "子川";
+<<<<<<< HEAD
+export const USER_SITE = "https://www.jieyou.ltd/"
+=======
+export const USER_SITE = "https://www.jieyou.ltd"
+>>>>>>> 26acf11f72e502baf0412a8dc93650c917a2d598
+export const USER_AVATAR = "/profile.webp";
+
+// Server and transition settings
+export const SERVER_URL = "https://waline.jieyou.ltd/";
+>>>>>>> 0aa0e5b3b27d4883db0dbb74e48eba9a2bafa870
 
 // Theme settings
 export const DAISYUI_THEME = {
@@ -26,6 +39,10 @@ export const CODE_THEME = {
   light: "github-light",
   dark: "github-dark",
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0aa0e5b3b27d4883db0dbb74e48eba9a2bafa870
 
 // Some informative text on the site
 export const infoTest = {
@@ -40,10 +57,12 @@ export const infoTest = {
   prevPage: "上一页",
   nextPage: "下一页",
 };
+=======
+>>>>>>> 26acf11f72e502baf0412a8dc93650c917a2d598
 
 // Menu items for navigation
 export const menuItems = [
-  { id: "home", text: "首页", href: "/", svg: "home", target: "_self" }, // Home page
+  { id: "home", text: "主页", href: "/", svg: "home", target: "_self" }, // Home page
   { id: "about", text: "关于", href: "/about", svg: "about", target: "_self" }, // About page
   {
     id: "blog",
@@ -99,7 +118,7 @@ export const menuItems = [
   {
     id: "contact",
     text: "联系",
-    href: "mailto:contact.evesunmaple@outlook.com", // Contact email
+    href: "admin@jieyou.ltd", // Contact email
     target: "_blank", // Open in a new tab
     svg: "contact",
   },
@@ -132,6 +151,7 @@ export const socialIcons = [
     svg: "rss",
   },
 ];
+<<<<<<< HEAD
 // Category Information
 export const categoriesInfo = [
   { title: "技术", desc: "有关技术的一些文章", target: "_self" },
@@ -139,3 +159,6 @@ export const categoriesInfo = [
   { title: "OI学习笔记", desc: "OIer 的“圣遗物”", target: "_self" },
   { title: "作文", desc: "和随笔有些不同", target: "_self" },
 ];
+=======
+// Category Information
+>>>>>>> 0aa0e5b3b27d4883db0dbb74e48eba9a2bafa870
