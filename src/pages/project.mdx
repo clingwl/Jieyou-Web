@@ -1,33 +1,35 @@
-import BaseLayout from "../layouts/BaseLayout.astro";
-import BaseCard from "../components/BaseCard.astro";
-import Collapse from "../components/blog/collapse.astro";
-import Diff from "../components/blog/diff.astro";
-import Error from "../components/blog/error.astro";
-import Info from "../components/blog/info.astro";
-import Kbd from "../components/blog/kbd.astro";
-import Success from "../components/blog/success.astro";
-import Warning from "../components/blog/warning.astro";
-import TimeLine from "../components/page/TimeLine.astro";
-import LinkCard from "../components/page/LinkCard.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-import ProjectJS from "../components/ProjectJS.astro";
 
-<BaseLayout title="Project">
-  <BaseCard title="Project">
-# Project
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseCard from "../../components/BaseCard.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import { t } from "i18next";
 
----
+export async function getStaticPaths() {
+  const blog = await getCollection("project");
+  return blog.map((post: { slug: any }) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+interface Props {
+  post: CollectionEntry<"project">;
+}
 
+const { post } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await post.render();
+
+<BaseLayout title={post.data.title}>
+  <BaseCard
+    title={post.data.title}
+    image={post.data.image}
+    pubDate={post.data.pubDate}
+    badge={post.data.badge}
+    categories={post.data.categories}
+    tags={post.data.tags}
+    word={remarkPluginFrontmatter.totalCharCount}
+    time={remarkPluginFrontmatter.readingTime}
+    isBlog="true"
+  >
+    <Content />
   </BaseCard>
-  <div class="mt-8 mb-8">
-    <ProjectCard
-      title="Thingsboard IoT智慧家居系统"
-      image="https://www.helloimg.com/i/2024/11/26/6745a4b2e97ab.jpg"
-      desc="一个基于Things Board的智慧家居系统"
-      url="https://github.com/clingwl"
-      target="_self"
-    />
-    
-  </div>
 </BaseLayout>
-<ProjectJS />
