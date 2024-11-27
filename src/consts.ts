@@ -3,18 +3,18 @@
 
 // Site title and description
 export const SITE_LANG = "zh";
-export const SITE_TAB = "SaroProck";
-export const SITE_TITLE = "SaroProck ⚡";
+export const SITE_TAB = "解忧小栈";
+export const SITE_TITLE = "解忧小栈 ⚡";
 export const SITE_DESCRIPTION = "一本本子";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
-export const USER_NAME = "EveSunMaple";
-export const USER_SITE = "https://frosti.saroprock.com"
+export const USER_NAME = "子川";
+export const USER_SITE = "https://www.jieyou.ltd"
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://waline.saroprock.com";
+export const SERVER_URL = "https://waline.jieyou.ltd";
 export const TRANSITION_API = true;
 
 // Theme settings
@@ -73,13 +73,6 @@ export const menuItems = [
         svg: "heart",
         target: "_self",
       }, // Life category
-      {
-        id: "categories",
-        text: "所有分类",
-        href: "/blog/categories",
-        svg: "categories",
-        target: "_self",
-      }, // All categories
     ],
   }, // Blog page with sub-items
   {
@@ -131,11 +124,4 @@ export const socialIcons = [
     title: "RSS Feed",
     svg: "rss",
   },
-];
-// Category Information
-export const categoriesInfo = [
-  { title: "技术", desc: "有关技术的一些文章", target: "_self" },
-  { title: "生活", desc: "生活中的所见所思所想", target: "_self" },
-  { title: "OI学习笔记", desc: "OIer 的“圣遗物”", target: "_self" },
-  { title: "作文", desc: "和随笔有些不同", target: "_self" },
 ];
