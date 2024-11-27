@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply scroll-smooth;
+  @apply scroll-smooth transition-colors;
 }
 
 .no-card {
@@ -59,7 +59,16 @@ a {
   @apply my-2;
 }
 
-html[data-theme="dracula"] {
+html[data-theme-type="light"] {
+  #content-box {
+    .active {
+      color: oklch(var(--n));
+      background-color: oklch(var(--b3));
+    }
+  }
+}
+
+html[data-theme-type="dark"] {
   --pagefind-ui-primary: oklch(var(--nc));
   --pagefind-ui-text: oklch(var(--nc));
   --pagefind-ui-background: oklch(var(--b1));
@@ -89,16 +98,9 @@ summary {
   list-style: none;
 }
 
-@media (max-width: 720px) {
-  body {
-    @apply text-lg;
-  }
-}
-
 @font-face {
   font-family: "Cascadia";
   src: url("/fonts/CascadiaCode.woff2") format("woff2");
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -179,23 +181,23 @@ h6 {
 }
 
 h1 {
-  @apply text-5xl leading-tight mt-7;
+  @apply text-5xl leading-tight pt-7;
 }
 
 h2 {
-  @apply text-4xl leading-snug mt-6;
+  @apply text-4xl leading-snug pt-6;
 }
 
 h3 {
-  @apply text-3xl leading-normal mt-5;
+  @apply text-3xl leading-normal pt-5;
 }
 
 h4 {
-  @apply text-2xl leading-relaxed mt-4;
+  @apply text-2xl leading-relaxed pt-4;
 }
 
 h5 {
-  @apply text-xl leading-relaxed mt-3;
+  @apply text-xl leading-relaxed pt-3;
 }
 
 strong,
@@ -353,6 +355,12 @@ thead th {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
+.copy-btn {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
 
 .timeline {
   @apply pl-0;
@@ -364,4 +372,27 @@ thead th {
 
 .footnotes {
   @apply alert;
+}
+
+.swup-progress-bar {
+  background-color: oklch(var(--p));
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.5s ease forwards;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

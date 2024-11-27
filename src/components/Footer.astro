@@ -1,9 +1,10 @@
 ---
 import { USER_NAME } from "../consts";
+import { USER_SITE } from "../consts";
 ---
 
 <footer
-  class="relative footer rounded-xl gap-0 items-start card bg-base-100 shadow-xl p-8 items-center"
+  class="relative footer gap-0 items-start card bg-base-100 shadow-xl p-8 items-center fade-in-up transition-colors"
 >
   <aside class="grid-flow-col items-center">
     <svg
@@ -20,20 +21,20 @@ import { USER_NAME } from "../consts";
       ></path>
     </svg>
     <p>
-      Copyright © <a
-        href="https://www.saroprock.com"
-        target="_blank"
-        class="font-bold">{USER_NAME}</a
+      Copyright © <a href={USER_SITE} target="_blank" class="font-bold"
+        >{USER_NAME}</a
       >
       {new Date().getFullYear()} - All right reserved
     </p>
   </aside>
   <nav>
     <p>
+      Powered by
+      <!-- Thanks for using this template. You can keep this line to support my work :) -->
       <a
-        href="https://beian.miit.gov.cn/s"
+        href="https://github.com/EveSunMaple/Frosti"
         target="_blank"
-        class="font-bold">鲁ICP备2021042868号-1</a
+        class="font-bold">Frosti Template ⚡️</a
       >
     </p>
   </nav>
