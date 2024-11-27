@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import { CODE_THEME } from "./src/consts.ts";
 import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 import terser from "@rollup/plugin-terser";
@@ -10,122 +11,48 @@ import rehypeKatex from "rehype-katex";
 import rehypeExternalLinks from 'rehype-external-links';
 import playformCompress from "@playform/compress";
 
+import swup from "@swup/astro";
 import astroI18next from "astro-i18next";
 
-import swup from "@swup/astro";
-import SwupScrollPlugin from "@swup/scroll-plugin";
-import SwupParallelPlugin from "@swup/parallel-plugin";
+import { transformers } from './src/config/transformers.js';
 
 import { remarkAddAnchor } from './src/plugins/remark-add-anchor.mjs';
 import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs';
 
+
+const { USER_SITE } = await import('./src/consts.ts');
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.jieyou.ltd/",
+  site: USER_SITE,
   output: 'static',
   style: {
     scss: {
       includePaths: ["./src/styles"],
     },
   },
-  integrations: [
-    mdx(),
-    icon(),
-    swup({
-      plugins: [new SwupScrollPlugin(), new SwupParallelPlugin()],
-      containers: ["#swup"],
-    }),
-    terser({
-      compress: true,
-      mangle: true,
-    }),
-    sitemap(),
-    tailwind(),
-    pagefind(),
-    astroI18next(),
-    playformCompress(),
-  ],
+  integrations: [mdx(), icon(), swup({
+    cache: true,
+    progress: true,
+    accessibility: true,
+    smoothScrolling: true,
+    preload: {
+      hover: true,
+      visible: false
+    },
+    // theme: 'slide',
+    containers: ["#swup"],
+  }), terser({
+    compress: true,
+    mangle: true,
+  }), sitemap(), tailwind(), pagefind(), astroI18next(), playformCompress()],
   markdown: {
     shikiConfig: {
       themes: {
-        light: "github-light",
-        dark: "github-dark",
+        light: CODE_THEME.light,
+        dark: CODE_THEME.dark,
       },
-      transformers: [
-        {
-          preprocess(code, { lang }) {
-            this.lang = lang;
-            return code;
-          },
-          root(node) {
-            if (node.tagName === "pre") {
-              node.tagName = "figure";
-              node.properties.className = ["highlight", this.lang];
-            }
-          },
-          pre(node) {
-            const toolsDiv = {
-              type: "element",
-              tagName: "div",
-              properties: { className: ["highlight-tools"] },
-              children: [
-                {
-                  type: "element",
-                  tagName: "div",
-                  properties: { className: ["code-lang"] },
-                  children: [{ type: "text", value: this.lang.toUpperCase() }],
-                },
-              ],
-            };
-            const lineNumberCode = {
-              type: "element",
-              tagName: "code",
-              children: [],
-            };
-            const lineNumberPre = {
-              type: "element",
-              tagName: "pre",
-              properties: { className: ["frosti-code", "gutter"] },
-              children: [lineNumberCode],
-            };
-            const codeContentPre = {
-              type: "element",
-              tagName: "pre",
-              properties: { className: ["frosti-code", "code"] },
-              children: [],
-            };
-            node.children.forEach((lineNode, index, count) => {
-              count = 0;
-              lineNode.children.forEach(() => {
-                if (count & (1 === 1)) {
-                  lineNumberCode.children.push({
-                    type: "element",
-                    tagName: "div",
-                    properties: { className: ["line"] },
-                    children: [{ type: "text", value: String(index + 1) }],
-                  });
-                  index++;
-                }
-                count++;
-              });
-
-              codeContentPre.children.push(lineNode);
-            });
-            const table = {
-              type: "element",
-              tagName: "div",
-              properties: { className: ["highlight-code"] },
-              children: [lineNumberPre, codeContentPre],
-            };
-            return {
-              type: "element",
-              tagName: "figure",
-              properties: { className: ["highlight", this.lang] },
-              children: [toolsDiv, table],
-            };
-          },
-        },
-      ],
+      transformers: transformers
     },
     remarkPlugins: [remarkMath, remarkAddAnchor, remarkReadingTime],
     rehypePlugins: [rehypeKatex,
