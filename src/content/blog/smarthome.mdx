@@ -1,14 +1,64 @@
 ---
-title: 基于thingsboard的智慧家居系统
+title: Smart Home System
 description: 基于thingsboard的智慧家居系统
 pubDate: 11 26 2024
 image: https://www.helloimg.com/i/2024/11/26/6745a61b9943e.jpg
 tags:
-  - Astro
+  - ThingsBoard
 categories:
-  - projects
+  - tech
 badge: 项目
 ---
 
 
-## 这只是一个测试！
+## 物联网云平台 Things Board
+
+IoT 平台是物联网技术的核心。使用物联网技术进行智能化改造，首先必须选择一个物联网平台。ThinsgBoard 是一个开源的物联网平台，它提供了丰富的功能，包括设备管理、数据采集、数据可视化、规则引擎等。
+![1732779521442](https://p.jieyou.ltd/i/2024/11/28/pgdvsi.jpg)
+
+## 传感器技术选型
+
+### 家居环境监控系统
+多合一传感器、二氧化碳传感器以及水浸
+传感器，监测家居环境中环境数值。执行器选择风扇、报警按键、紧急按钮以及声光报警器，除了人工
+控制之外，还可以根据传感器数值变化以及状态变化进行相应联动控制风扇以及报警灯。
+
+
+### 联动控制系统
+室内温湿度异常可打开风扇，模拟家居环境中通风系统，对室内环境进行调整。水浸传感器、室内
+智能三鉴入侵传感器、人体红外以及紧急按钮联动声光报警，家居环境出现异常时，进行报警提示以及
+界面告警提示。
+
+## 网关
+### 网关选择新大陆的网关并启用thingsboarsd服务
+
+![1732783848721](https://p.jieyou.ltd/i/2024/11/28/rb1mhb.jpg)
+## 设备配置
+
+| Name   | 规则链   | 队列 | 标签 |
+| --------- | -------- | ------ |
+| _Home_Gateway_ | **默认** | main | 中心网关 |
+| _Home_Sensor_ | **默认** | main | 传感器 |
+| _Home_Actuator_ | **默认** | main | 执行器 |
+
+## 设备
+
+|名称|设备配置|标签|是否网关|
+|Home Gateway| _Home_Gateway_ | 中心网关 | 是|
+|---|---|---|---|---|---|
+|名称|设备配置|标签|
+|PM2.5传感器|_Home_Sensor_|传感器|
+|Temperature Sensor|_Home_Sensor_|传感器|
+|Humidity Sensor|_Home_Sensor_|传感器|
+|Water Sensor|_Home_Sensor_|传感器|
+|Body Sensor|_Home_Sensor_|传感器|
+|Motion Sensor|_Home_Sensor_|传感器|
+|Fire Sensor|_Home_Sensor_|传感器|
+|Smoke Sensor|_Home_Sensor_|传感器|
+|Sound Sensor|_Home_Sensor_|传感器|
+|Fan|_Home_Actuator_|执行器|
+|Alarm|_Home_Actuator_|执行器|
+|Emergency Button|_Home_Actuator_|执行器|
+
+
+
