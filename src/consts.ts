@@ -62,14 +62,14 @@ export const menuItems = [
       {
         id: "tech",
         text: "技术博客",
-        href: "/blog/categories/技术",
+        href: "/blog/categories/tech",
         svg: "cube",
         target: "_self",
       }, // Technology category
       {
         id: "life",
         text: "生活博客",
-        href: "/blog/categories/生活",
+        href: "/blog/categories/life",
         svg: "heart",
         target: "_self",
       }, // Life category
