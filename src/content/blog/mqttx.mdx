@@ -1,0 +1,90 @@
+---
+title: 使用MQTTX与Thingsboard进行通信
+description: MQTTX与Thingsboard进行通信
+pubDate: 11 28 2024
+image: https://p.jieyou.ltd/i/2024/11/28/vt65yx.jpg
+tags:
+  - MQTT
+categories:
+  - tech
+badge: 学习笔记
+---
+
+import Info from "../../components/blog/info.astro";
+import Error from "../../components/blog/error.astro";
+import Warning from "../../components/blog/warning.astro";
+import Success from "../../components/blog/success.astro";
+
+
+
+## 前期准备
+
+1.部署Thingsboard平台
+2.安装MQTTX客户端
+
+## 在Thingsboard中创建网关设备
+
+![1732792913350](https://p.jieyou.ltd/i/2024/11/28/vt5r5q.jpg)
+![1732792945911](https://p.jieyou.ltd/i/2024/11/28/vt6617.jpg)
+![1732792971038](https://p.jieyou.ltd/i/2024/11/28/vt65yx.jpg)
+创建好之后记住ID，用户名和密码，在后面连接时需要用到
+
+## 使用MQTTX进行连接
+
+![1732793223162](https://p.jieyou.ltd/i/2024/11/28/vvdvb4.jpg)
+只需要填写红圈里的内容，然后点击连接即可
+
+![1732793308137](https://p.jieyou.ltd/i/2024/11/28/vw49b4.jpg)
+
+<sussfully>这里有一个小绿点说明连接成功了</sussfully>
+
+
+
+### 网关API
+
+#### 遥测上传 API
+
+这是我觉得最有用的消息了。
+
+```bash
+Topic: v1/gateway/telemetry
+message:
+{
+  "Device A": [
+    {
+      "ts": 1483228800000,
+      "values": {
+        "temperature": 42,
+        "humidity": 80
+      }
+    },
+    {
+      "ts": 1483228801000,
+      "values": {
+        "temperature": 43,
+        "humidity": 82
+      }
+    }
+  ],
+  "Device B": [
+    {
+      "ts": 1483228800000,
+      "values": {
+        "temperature": 42,
+        "humidity": 80
+      }
+    }
+  ]
+}
+```
+### MQTT设备API
+
+#### 遥测上传 API
+这个是MQTT设备的上传的API
+```bash
+Topic: v1/devices/me/telemetry
+message: {
+  "temperature": 42,
+  "humidity": 80
+}
+```
